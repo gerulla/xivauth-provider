@@ -69,6 +69,17 @@ To redirect to the authentication, and then:
 $user = Socialite::driver('xivauth')->user()
 ```
 
+Optionally if you want to add additional scopes you can use the built in scope methods:
+```php
+return Socialite::driver('xivauth')->withCharactersScope()->redirect(); // characters:all
+return Socialite::driver('xivauth')->withEmailScope()->redirect(); // user:email
+return Socialite::driver('xivauth')->withSocialScope()->redirect(); // user:social
+```
+Or use the extras method to add multiple scopes:
+```php
+return Socialite::driver('xivauth')->withExtraScopes(['user:email', 'user:social', 'characters:all'])->redirect();
+```
+
 In the return function. The user will contain a `name` and `email` field
 populated from the OAuth source along with a `attributes` object with the following fields:
 
