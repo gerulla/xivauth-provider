@@ -17,8 +17,7 @@
   ],
   "support": {
     "issues": "https://github.com/socialiteproviders/providers/issues",
-    "source": "https://github.com/socialiteproviders/providers",
-    "docs": "https://xivauth.net/"
+    "source": "https://github.com/socialiteproviders/providers"
   },
   "require": {
     "php": "^8.0",
